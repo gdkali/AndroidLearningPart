@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/whatLearningEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="What you are Learning?"
+        app:layout_constraintEnd_toEndOf="@+id/nameEt"
+        app:layout_constraintStart_toStartOf="@+id/nameEt"
+        app:layout_constraintTop_toBottomOf="@id/nameEt" />
+
+    <Button
+        android:id="@+id/saveDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Details"
+        android:onClick="saveDetails"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="@+id/whatLearningEt"
+        app:layout_constraintTop_toBottomOf="@id/whatLearningEt" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Clear Details"
+        android:onClick="clearallDetails"
+        app:layout_constraintEnd_toEndOf="@+id/whatLearningEt"
+        app:layout_constraintTop_toBottomOf="@id/whatLearningEt" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintStart_toStartOf="@+id/saveDetailsBtn"
+        app:layout_constraintTop_toBottomOf="@id/saveDetailsBtn" />
+
+    <TextView
+        android:id="@+id/learningTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintStart_toStartOf="@+id/saveDetailsBtn"
+        app:layout_constraintTop_toBottomOf="@id/nameTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
